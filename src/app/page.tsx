@@ -24,23 +24,27 @@ export default function LandingPage() {
           <AptxLogo className="h-6 w-6 text-primary" />
           <span className="ml-2 text-xl font-bold">AptX</span>
         </Link>
-        <nav className="ml-auto hidden lg:flex gap-4 sm:gap-6 items-center">
-          <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            About Us
-          </Link>
-          <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            How It Works
-          </Link>
-          <Link href="#feedback" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Feedback
-          </Link>
-          <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Contact
-          </Link>
-          <ThemeToggle />
-           <Button asChild size="sm">
+        <nav className="ml-auto hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+              About Us
+            </Link>
+            <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+              How It Works
+            </Link>
+            <Link href="#feedback" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+              Feedback
+            </Link>
+            <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+              Contact
+            </Link>
+          </div>
+          <div className="flex items-center gap-2 pl-4 border-l">
+            <ThemeToggle />
+            <Button asChild size="sm">
               <Link href="/auth/login">Login</Link>
-           </Button>
+            </Button>
+          </div>
         </nav>
         <div className="ml-4 lg:hidden flex items-center gap-2">
             <ThemeToggle />
@@ -51,7 +55,7 @@ export default function LandingPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative">
+        <section className="w-full py-8 md:py-12 lg:py-16 relative">
            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-background to-green-100/30 dark:to-green-900/20 -z-10"></div>
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
